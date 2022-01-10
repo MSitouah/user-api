@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+      <div id="test">
+      	<h1><%= title %></h1>
+      </div>
+    <% if (data.length == 0) { %>
+    <form action="/users  %>" method="post">
+    <% } else { %>
+    <form action="/users/<%= data.id  %>" method="post">
+    <% } %> 
+	    <input type="hidden" name="id" value="<%= data.id  %>">
+	     <div class="form-group row"> 
+		    <label for="name" class="col-sm-1 ">Name</label> 
+		    <div class="col-sm-3">
+	          <input class="form-control" type="text" name="name" value= "<%= data.name  %>" >
+	         </div>  
+	     </div>  
+	     <div class="form-group row">
+		 <label for="password" class="col-sm-1">Password</label> 
+	     <div class="col-sm-3">
+	       <input class="form-control" type="text" name="password" value= "<%= data.password  %>" >  
+	     </div>
+	     </div>
+	     <div class="form-group row">
+		  <label for="profession" class="col-sm-1">Profession</label> 
+	      <div class="col-sm-3">
+	        <input class="form-control" type="text" name="profession" value= "<%= data.profession  %>" >
+	      </div>
+	   </div>
+	   <button type="submit" class="btn btn-primary">Save</button>
+        <% if (data.length == 0) { %>        
+          <% null %>
+        <% } else { %>
+	      <button type="submit" formaction="/users/del/<%= data.id  %>" class="btn btn-primary">Delete</button>
+        <% } %>
+        <button type="submit" formmethod="GET" formaction="/" class="btn btn-primary">Cancel</button>
+
+    </form>
+
+
+  </body>
+</html>

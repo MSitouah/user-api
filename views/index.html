@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title></title>
+  </head>
+  <body>
+      <div id="test">
+      	<h1><%= title %></h1>
+      </div>
+<a href="/users %>">Add user</a> 
+<table class="table">
+  <thead class="thead-dark">
+    <tr><th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Profession</th>
+    </tr>
+  </thead>  
+    <% for (var i = 0; i < data.length; i++) { %> 	
+    <tr><td><a href="/users/<%= data[i].id %>"><%= data[i].id %></a> </td>
+    	  <td><%= data[i].name %></td>
+        <td><%= data[i].password %></td>
+        <td><%= data[i].profession %></td>
+    </tr>
+    	
+    <% } %>
+</table>
+
+  </body>
+</html>

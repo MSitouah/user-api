@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Mourad Sitouah",
+    "password": "password 3",
+    "profession": "Master",
+    "id": "1231313213213"
+  },
+  {
+    "id": "1640914586396",
+    "name": "Mehdi Sitouah",
+    "password": "password1",
+    "profession": "king"
+  },
+  {
+    "name": "Nassim Sitouah",
+    "password": "password1",
+    "profession": "king",
+    "id": "1640914629033"
+  },
+  {
+    "id": "1641053087100",
+    "name": "sitouah.mourad@mcgill.ca",
+    "password": "pass2222",
+    "profession": "security"
+  },
+  {
+    "name": "Mario Luiggi",
+    "password": "pass1",
+    "profession": "Game",
+    "id": "1641071930654"
+  },
+  {
+    "name": "toto",
+    "password": "pass",
+    "profession": "Game",
+    "id": "1641169203901"
+  }
+]
